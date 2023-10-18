@@ -6,8 +6,8 @@ async function createAirplane(req ,res)
 {
     try{
         const airplane=await AirplaneService.createAirplane({
-            capaicty: req.capaicty,
-            modelNumber: req.modelNumber,
+            modelNumber: req.body.modelNumber,
+            capaicty: req.body.capaicty,
     });
     return res.status(StatusCodes.CREATED).json(
         {
